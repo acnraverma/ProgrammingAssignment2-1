@@ -3,17 +3,18 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(mtx = matrix()) {
-    inverse <- NULL
-    set <- function(x) {
-        mtx <<- x;
-        inverse <<- NULL;
-    }
-    get <- function() return(mtx);
-    setinv <- function(inv) inverse <<- inv;
-    getinv <- function() return(inverse);
-    return(list(set = set, get = get, setinv = setinv, getinv = getinv))
+makeCacheMatrix <- function(mtrx = matrix()) {
+  inverseVal <- NULL
+  set <- function(x) {
+    mtrx <<- x;
+    inverseVal <<- NULL;
+  }
+  get <- function() return(mtrx);
+  setinv <- function(inv) inverseVal <<- inv;
+  getinv <- function() return(inverseVal);
+  return(list(set = set, get = get, setinv = setinv, getinv = getinv))
 }
+
 
 
 ## Write a short comment describing this function
